@@ -1,0 +1,13 @@
+{%extends 'layout.html'%}
+
+{%block body%}
+    <div class='card' id='add'>
+        <h1 style='margin-bottom: 50px'>ADD QUESTION</h1>
+        <p>Masz pomysły na pytania? Dodaj je przed/po grze, a po kliknięciu prześlij trafią do puli! Pytanie ma limit 100 znaków</p>
+        <form method = 'POST' action = "{% url 'add' %}" enctype='multipart-data'>
+            {% csrf_token %}
+            {{ form }}
+            <input type='submit'>
+        </form>
+    </div>
+{%endblock%}

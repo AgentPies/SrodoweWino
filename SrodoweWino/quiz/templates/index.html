@@ -1,0 +1,41 @@
+
+{% load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='{% static 'app.js'%}'></script>
+    <link rel="stylesheet" href="{% static 'style_layout/style_layout.css' %}">
+    <link rel="stylesheet" href="{% static 'style_index/style_index.css' %}">
+    <title>🥂Środowe Wino The Game🥂</title>
+</head>
+<body>
+    <navbar>
+        <ul>
+            <li><a href= {% url 'index'%}> Home</a></li>
+            <li><a href= {% url 'add'%}> Add question</a></li>
+            <li><a href= {% url 'players'%}> Play</a></li>
+        </ul>
+    </navbar>
+    <div id='index'>
+        <div id='rules'>
+            <p>Welcome to</p>
+            <h1>ŚRODOWE WINO THE GAME</h1>
+            <p>Czy to hazard? Czy to drinking game? Czy to test?</p>
+            <h2>Jak grać:</h2>
+            <ul id='list_rules'>
+                <li>Kliknij Play wprowadź graczy</li>
+                <li>Pytania będą się wyświetlały losowo, ale jeśli dotyczą Ciebie kliknij "Skip"</li>
+                <li>Uwaga - w grze mogą się równiej pojawić zadania huhu</li>
+                <li>Jeśli odpowiedziałeś dobrze - sztos! Jeśli nie - o bu. Zaznacz odpowiedni przycisk, żeby policzyło Ci punkty (lub nie :/)</li>
+                <li>Kto źle odpowie - pije łyka !!!!!</li>
+                <li>W trakcie i po zakończeniu gry NIE WRACAJ NA STRONĘ GŁ&Oacute;WNĄ! Zresetuje to całą grę i stracisz zapisane punkty</li>
+                <li>W każdym momencie możesz urozmaicić pulę dodając swoje pytania w zakładce "Add Question"</li>
+            </ul>
+            <a id='start' href= {% url 'players'%}> Play</a>
+        </div>
+        <img src="{% static 'img/glowna.jpg' %}">
+    </div>
+

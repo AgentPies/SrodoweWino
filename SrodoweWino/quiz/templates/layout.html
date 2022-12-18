@@ -1,0 +1,31 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='{% static 'app.js'%}'></script>
+    <link rel="stylesheet" href="{% static 'style_layout/style_layout.css' %}">
+    {%block head%}
+    {%endblock%}
+    <title>🥂Środowe Wino The Game🥂</title>
+</head>
+<body>
+    <navbar>
+        <ul>
+            <li><a href= {% url 'index'%}> Home</a></li>
+            <li><a href= {% url 'add'%}> Add question</a></li>
+        </ul>
+    </navbar>
+    <div id='all'>
+        <div class='site'style="background-image: url({% static 'img/left.jpg' %});"></div>
+        <div id='center'>
+            {% block body%}
+            {% endblock %}
+        </div>
+        <div class='site'style="background-image: url({% static 'img/right.jpeg' %});"></div>
+    </div>
+</div>
+</body>
+</html>

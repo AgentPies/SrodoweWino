@@ -1,0 +1,10 @@
+{%extends 'layout.html'%}
+
+{%block body%}
+    <div class='card' id='scoreboard'>
+    <h1>Scoreboard</h1>
+    {%for player in players%}
+        <p>{{player.name}}:    {{player.score}}<p>
+    {%endfor%}
+    </div>
+{%endblock%}
